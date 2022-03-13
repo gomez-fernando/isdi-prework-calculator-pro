@@ -38,8 +38,7 @@ Ronda ${ronda}`);
       alert(`That's not not a number. Please try again.`);
       newNumber = prompt(`Enter a number or press cancel to stop.
 Ronda ${ronda}`);
-
-  }
+    }
 
     if(newNumber !== null) {
       numberList.push(parseFloat(newNumber));
@@ -53,7 +52,7 @@ Ronda ${ronda}`);
     alert(`You've stopped the operation.
 There's no data to calculate`);
 
-askRestart();
+    askRestart();
 
   } else{
     let total = numberList[0];
