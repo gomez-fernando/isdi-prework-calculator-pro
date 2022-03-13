@@ -1,7 +1,7 @@
 const askRestart = () =>{
   do {
     restart = prompt(`To restart: 'y'.
-  To close the program: 'n'`);
+To close the program: 'n'`);
   
     switch (restart) {
       case 'y':
