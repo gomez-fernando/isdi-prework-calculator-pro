@@ -21,17 +21,31 @@ const calculatorPro = () => {
   let numberList = [];
   let results = [];
   let restart;
+  let welcome = true;
+  let ronda = 1;
 
   do {
-    newNumber = prompt(`Welcome to Calculator Pro !!
-Enter a number or press cancel to stop`);
+    (welcome)
+    ? newNumber = prompt(`Welcome to Calculator Pro !!
+Enter a number or press cancel to stop.
+Ronda ${ronda}`)
+    : newNumber = prompt(`Enter a number or press cancel to stop.
+Ronda ${ronda}`);
+
+    
 
     while (isNaN(newNumber) || newNumber === "") {
       alert(`That's not not a number. Please try again.`);
-      newNumber = prompt("Enter a number or press cancel to stop");
+      newNumber = prompt(`Enter a number or press cancel to stop.
+Ronda ${ronda}`);
+
   }
 
-    if(newNumber !== null) numberList.push(parseFloat(newNumber));
+    if(newNumber !== null) {
+      numberList.push(parseFloat(newNumber));
+      ronda++;
+      welcome = false;
+    }
 
   } while (newNumber !== null);
 
